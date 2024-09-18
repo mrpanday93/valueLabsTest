@@ -1,4 +1,4 @@
-#Instructions
+# Instructions
 - Clone the project
 - For node go inside demoNode and run "npm install" command
 - For node go inside demoReact and then navigate to table folder. Run "npm install" command.
