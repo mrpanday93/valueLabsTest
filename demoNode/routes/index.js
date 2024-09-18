@@ -1,16 +1,7 @@
 var express = require('express');
 var router = express.Router();
+const AuthenticationMiddleware = require('../Middleware/authentication').AuthenticationMiddleware;
 
-const AuthenticationMiddleware = (req, res, next) => {
-  
-  let user = req.query.user;
-
-  if (user=='valuelabs') {
-    next();
-  } else {
-    res.status(401).send('Unauthorized')
-  }  
-};
 
 router.get('/:num1/:num2', [AuthenticationMiddleware], function(req, res, next) {
   try {
